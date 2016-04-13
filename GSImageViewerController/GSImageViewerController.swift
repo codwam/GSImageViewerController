@@ -15,8 +15,8 @@ public struct GSImageInfo {
         case AspectFill = 2
     }
     
-    public let image     : UIImage
-    public let imageMode : ImageMode
+    public var image     : UIImage
+    public var imageMode : ImageMode
     public var imageHD   : NSURL?
     
     public var contentMode : UIViewContentMode {
@@ -81,10 +81,10 @@ public class GSTransitionInfo {
 
 public class GSImageViewerController: UIViewController {
     
-    public let imageInfo      : GSImageInfo
+    public var imageInfo      : GSImageInfo
     public var transitionInfo : GSTransitionInfo?
     
-    private let imageView  = UIImageView()
+    public let imageView  = UIImageView()
     private let scrollView = UIScrollView()
     
     private lazy var session: NSURLSession = {
